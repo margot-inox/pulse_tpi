@@ -24,7 +24,7 @@ body {
     border: solid 2px transparent;
     font-family: 'ClashDisplay-Medium', sans-serif;
     text-decoration: none;
-    font-size: clamp(0.875rem, 0.8332rem + 0.2432vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 14px - max-FS: 18 */
+    font-size: clamp(0.875rem, 0.8332rem + 0.2432vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 14px - max-FS: 18px */
 }
 .btn-primary:hover {
     background-color: transparent;
@@ -38,7 +38,7 @@ body {
     border: solid 2px var(--bleu-roi);
     font-family: 'ClashDisplay-Medium', sans-serif;
     text-decoration: none;
-    font-size: clamp(1rem, 0.9791rem + 0.1216vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 18 */
+    font-size: clamp(1rem, 0.9791rem + 0.1216vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 18px */
 }
 .btn-secondary:hover {
     background-color: var(--bleu-roi);
@@ -46,15 +46,29 @@ body {
     color: var(--blanc);
 }
 
+h2 {
+    font-family: 'ClashDisplay-Medium', sans-serif;
+    color: var(--bleu-roi);
+    text-transform: uppercase;
+    font-size: clamp(1.625rem, 1.5414rem + 0.4863vw, 2.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 26px - max-FS: 34px */
+    margin-bottom: 3%;
+}
+h3 {
+    font-family: 'ClashDisplay-Medium', sans-serif;
+    font-size: clamp(1.25rem, 1.1664rem + 0.4863vw, 1.75rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 20px - max-FS: 28px */
+    margin-bottom: 2%;
+}
+
 p {
     font-family: 'ClashDisplay-Regular', sans-serif;
-    font-size: clamp(0.75rem, 0.6037rem + 0.8511vw, 1.625rem);
+    font-size: clamp(0.75rem, 0.6037rem + 0.8511vw, 1.625rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 12px - max-FS: 26px */
+    line-height: 140%;
 }
 
 p.emph {
     font-family: 'ClashDisplay-Medium', sans-serif;
     text-decoration: none;
-    font-size: clamp(1rem, 0.9164rem + 0.4863vw, 1.5rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 24 */
+    font-size: clamp(1rem, 0.9164rem + 0.4863vw, 1.5rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 24px */
 }
 
 .grid-container {
@@ -125,7 +139,7 @@ section {
 nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     font-family: 'ClashDisplay-Medium', sans-serif;
     text-decoration: none;
-    font-size: clamp(1rem, 0.9791rem + 0.1216vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 18 */
+    font-size: clamp(1rem, 0.9791rem + 0.1216vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 18px */
 }
 
 .mobile>.closed-menu>a>img {
@@ -196,7 +210,7 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     font-family: 'ClashDisplay-Variable', sans-serif;
     animation: titleAnimation 7s infinite alternate ease-in-out;
     animation-delay:2s;
-    font-size: clamp(4.625rem, 4.1862rem + 2.5532vw, 7.25rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 74px - max-FS: 116 */
+    font-size: clamp(4.625rem, 4.1862rem + 2.5532vw, 7.25rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 74px - max-FS: 116px */
     margin-bottom: 5%;
 }
 .hero-header-content>.emph {
@@ -208,6 +222,33 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     50% {font-weight: 700;}
     100% {font-weight: 200;}
 }
+
+/*  ---------- AIDE SECTION ---------- */
+.aide {
+    margin-block: 10%;
+    display: flex;
+}
+.aide>img {
+    width: 40%;
+    margin-left: 8.3%;
+    margin-right: 4%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.aide-content>p:nth-child(3) {
+    margin-bottom: 8%;
+}
+.aide-content>p:nth-child(5) {
+    margin-bottom: 8%;
+}
+.aide-content>.btn-zone {
+    display: flex;
+}
+.aide-content>.btn-zone>a:nth-child(1) {
+    margin-right: 3%;
+}
+
+
 
 /*  ---------- TABLET & MOBILE STYLE ---------- */
 @media screen and (max-width: 1024px) {
@@ -235,5 +276,30 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
         color: var(--noir);
         grid-column: 2 / span 9;
     }
+
+    /*  ---------- AIDE SECTION ---------- */
+    .aide {
+        flex-direction: column-reverse;
+    }
+    .aide-content {
+        margin-inline: 8.3%;
+        margin-bottom: 8.3%;
+    }
+    .aide>img {
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+    .aide-content>.btn-zone {
+        flex-direction: column-reverse;
+    }
+    .aide-content>.btn-zone>a {
+        margin: auto;
+    }
+    .aide-content>.btn-zone>a:nth-child(1) {
+        margin: auto;
+        margin-top: 5%;
+    }
+
 
 }
