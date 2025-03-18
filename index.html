@@ -9,8 +9,8 @@
     <script src="script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="src/image/favicon.ico">
 </head>
-<body>
-    <nav>
+
+    <nav class="desktop">
         <a href="index.html"><img src="src/image/logo_bleu.png" alt="logo association de soutien au cancer - pulse"></a>
         <div class="main-nav-link">
             <a href="#">l'association</a>
@@ -21,7 +21,29 @@
             <a href="#" class="btn-secondary">faire un don</a>
             <a href="#" class="btn-primary">rejoindre la communauté</a>
         </div>
+    </nav>
 
+    <nav class="mobile">
+        <div class="closed-menu">
+            <a href="index.html"><img src="src/image/logo_bleu.png" alt="logo association de soutien au cancer - pulse"></a>
+            <svg class="burger-menu-icon to-open" width="30" height="21" viewBox="0 0 26 21" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 2H25.5" stroke-width="4"/>
+                <path d="M0 10.5H25.5" stroke-width="4"/>
+                <path d="M0 19H25.5" stroke-width="4"/>
+            </svg>
+            <svg class="burger-menu-icon to-close" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L20.0312 20.0312" stroke="#361FDB" stroke-width="4"/>
+                <path d="M2 20L20.0312 1.96878" stroke="#361FDB" stroke-width="4"/>
+                </svg>
+                
+        </div>
+        <div class="opened-burger-menu">
+            <a href="#">l'association</a>
+            <a href="#">les événements</a>
+            <a href="#">la communauté</a>
+            <a href="#" class="btn-secondary">faire un don</a>
+            <a href="#" class="btn-primary">rejoindre la communauté</a>
+        </div>
     </nav>
 
 </body>
