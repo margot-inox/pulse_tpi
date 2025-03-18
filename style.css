@@ -52,6 +52,12 @@ p.emph {
     font-size: clamp(1rem, 0.9791rem + 0.1216vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 18 */
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+
 /*  ---------- NAV STYLE ---------- */
 .desktop {
     display: flex;
@@ -65,13 +71,12 @@ p.emph {
     border-radius: 10px;
     backdrop-filter: blur(15px);
     width: 96vw;
-    margin: auto;
-    margin-top: 3vh;
+    margin-inline: 2vw;
+    margin-top: 2vw;
     padding: 1.5vh;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 3vh;
+    position: fixed;
     z-index: 200;
 }
 
