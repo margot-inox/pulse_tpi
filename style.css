@@ -46,16 +46,24 @@ body {
     color: var(--blanc);
 }
 
+p {
+    font-family: 'ClashDisplay-Regular', sans-serif;
+    font-size: clamp(0.75rem, 0.6037rem + 0.8511vw, 1.625rem);
+}
+
 p.emph {
     font-family: 'ClashDisplay-Medium', sans-serif;
     text-decoration: none;
-    font-size: clamp(1rem, 0.9791rem + 0.1216vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 18 */
+    font-size: clamp(1rem, 0.9164rem + 0.4863vw, 1.5rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 24 */
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+}
 
+section {
+    width: 100%;
 }
 
 /*  ---------- NAV STYLE ---------- */
@@ -159,7 +167,52 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     display: none;
 }
 
+/*  ---------- HERO HEADER SECTION ---------- */
+.hero-header {
+    height: 90vh;
+    background-image: url("src/image/hearo_header.jpg");
+    background-size: cover;
+}
+
+.custom-mouse-light {
+    position: absolute;
+    width: 100vw;
+    height: 90vh;
+    background: var(--noir);
+    z-index: 15;
+}
+.hero-header-content {
+    z-index: 30;
+    grid-column: 2 / span 6;
+    color: var(--blanc);
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 15%;
+}
+
+.hero-header-content>h1 {
+    font-family: 'ClashDisplay-Variable', sans-serif;
+    animation: titleAnimation 7s infinite alternate ease-in-out;
+    animation-delay:2s;
+    font-size: clamp(4.625rem, 4.1862rem + 2.5532vw, 7.25rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 74px - max-FS: 116 */
+    margin-bottom: 5%;
+}
+.hero-header-content>.emph {
+    margin-bottom: 3%;
+}
+
+@keyframes titleAnimation {
+    0% {font-weight: 200;}
+    50% {font-weight: 700;}
+    100% {font-weight: 200;}
+}
+
+/*  ---------- TABLET & MOBILE STYLE ---------- */
 @media screen and (max-width: 1024px) {
+
+    /*  ---------- MENU STYLE ---------- */
     .desktop {
         display: none;
     }
@@ -169,4 +222,18 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     .mobile>.closed-menu {
         display: flex;
     }
+
+    /*  ---------- HERO HEADER SECTION ---------- */
+    .custom-mouse-light {
+        display: none;
+    }
+    .hero-header {
+        background-image: linear-gradient(30deg, rgba(255, 237, 209, 1), rgba(255, 237, 209, 0)), url("src/image/hearo_header.jpg");
+        background-size: cover;
+    }
+    .hero-header-content {
+        color: var(--noir);
+        grid-column: 2 / span 9;
+    }
+
 }

@@ -15,3 +15,11 @@ xMenuIcon.addEventListener("click", () => toggleMenu(false));
 menuLinks.forEach(link => {
     link.addEventListener("click", () => toggleMenu(false));
 });
+
+
+let customMouseLight = document.querySelector(".custom-mouse-light");
+let rect = customMouseLight.getBoundingClientRect();
+
+customMouseLight.addEventListener("mousemove", function (e) {
+  e.target.style.background = `radial-gradient(circle at ${e.clientX - rect.x}px ${e.clientY - rect.y}px, transparent, #080526 300px, #080526 100%)`;
+});
