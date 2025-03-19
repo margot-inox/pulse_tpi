@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 200vh;
-}
-
 :root {
     --bleu-roi: #361FDB;
     --peche:  #FFA161;
@@ -74,6 +70,7 @@ p.emph {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    overflow: hidden;
 }
 
 section {
@@ -306,6 +303,36 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     font-size: clamp(0.625rem, 0.5623rem + 0.3647vw, 1rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 10px - max-FS: 16px */
 }
 
+/*  ---------- VALEURS SECTION ---------- */
+.valeurs {
+    margin-top: 10%;
+}
+.valeurs>h2 {
+    grid-column: 2 / span 11;
+}
+.values-box {
+    grid-column: 2 / span 10;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.value {
+    background-color: var(--blanc);
+    border-radius: 5px;
+    padding: 2%;
+    width: 24%;
+    text-align: center;
+    border-radius: 5px;
+}
+.value>p.emph {
+    margin-bottom: 3%;
+}
+.valeurs>a {
+    grid-column: 1 / span 12;
+    margin: 5% auto 0 auto;
+}
+
+
 /*  ---------- TABLET & MOBILE STYLE ---------- */
 @media screen and (max-width: 1024px) {
 
@@ -342,6 +369,14 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     }
     .aide-content>.btn-zone>a:nth-child(1) {
         margin: 3% auto 0 0;
+    }
+
+    /*  ---------- VALEURS SECTION ---------- */
+    .value {
+        width: 48%;
+    }
+    .value:nth-child(1), .value:nth-child(2) {
+        margin-bottom: 4%;
     }
 
 }
@@ -381,6 +416,14 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     .event>img {
         grid-column: 1 / span 12;
         border-radius: 0;
+        margin-top: 8.3%;
+    }
+
+    /*  ---------- VALEURS SECTION ---------- */
+    .valeurs>h2 {
+        margin-bottom: 8.3%;
+    }
+    .valeurs>a {
         margin-top: 8.3%;
     }
 }
