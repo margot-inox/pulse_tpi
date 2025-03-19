@@ -11,6 +11,11 @@
     --blanc: #FFEDD1;
 }
 
+::selection {
+    background-color: rgba(54, 31, 219, 0.5);
+    color: var(--blanc);
+}
+
 /*  ---------- GENERAL STYLE ---------- */
 .btn-primary {
     background-color: var(--bleu-roi);
