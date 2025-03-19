@@ -97,6 +97,7 @@ section {
 .desktop, .mobile>.closed-menu {
     background-color: rgba(255, 237, 209, 0.8);
     border-radius: 10px;
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     width: 96vw;
     margin-inline: 2vw;
@@ -401,6 +402,7 @@ footer {
     padding: 0.6rem;
     border: none;
     border-bottom: solid 2px transparent;
+    border-radius: 0;
  }
  .footer-col>form>input::placeholder {
     opacity: 60%;
