@@ -138,7 +138,72 @@
         </section>
 
         <section class="don grid-container">
-            <h2>Faire un don</h2>
+            <div class="don-content">
+                <h2>Faire un don</h2>
+                <form>
+                    <div class="form-part1">
+                    <div class="zone-soutien">
+                        <h3>type de soutien</h3>
+                        <div class="input-zone">
+                            <input type="radio" id="unique" name="soutien" value="unique" checked>
+                            <label for="unique">je donne une fois</label>
+
+                            <input type="radio" id="mensuel" name="soutien" value="mensuel">
+                            <label for="mensuel">je donne chaque mois</label>
+                        </div>
+                    </div>
+
+                    <div class="zone-montant">
+                        <h3>montant</h3>
+                        <div class="input-zone">
+                            <input type="radio" id="cinquante" name="montant" value="cinquante" checked>
+                            <label for="cinquante">50 CHF</label>
+    
+                            <input type="radio" id="cent" name="montant" value="cent">
+                            <label for="cent">100 CHF</label>
+
+                            <input type="radio" id="centcinquante" name="montant" value="centcinquante">
+                            <label for="centcinquante">150 CHF</label>
+
+                            <input type="radio" id="autre" name="montant" value="autre">
+                            <label for="autre">
+                                <input type="number" id="montantPerso" name="montantPerso" min="10" placeholder="autre">
+                            </label>
+                        </div>
+                    </div>
+                    
+        
+                    <div class="zone-paiement">
+                        <h3>moyen de paiement</h3>
+                        <div class="input-zone">
+                            <input type="radio" id="twint" name="paiement" value="twint" checked>
+                            <label for="twint">twint</label>
+
+                            <input type="radio" id="facture" name="paiement" value="facture">
+                            <label for="facture">sur facture</label>
+
+                            <input type="radio" id="carte" name="paiement" value="carte">
+                            <label for="carte">par carte</label>
+                        </div>
+                    </div>
+
+                    <div class="zone-info">
+                        <h3>informations personnelles</h3>
+                        <div class="input-zone">
+                            <input type="text" id="prenom" size="30" placeholder="Prénom">
+                            <input type="text" id="nom" size="30" placeholder="Nom">
+                            <input type="email" id="email" pattern=".+@exemple\.com" size="30" placeholder="adresse mail">
+                        </div>
+                    </div>
+
+                    <div class="zone-nl-checkbox">
+                        <input type="checkbox" id="checkbox-nl" name="checkbox-nl" checked>
+                        <label for="checkbox-nl">j'accepte de recevoir des nouvelles de l'association par email</label>
+                    </div>
+
+
+                </form>
+            </div>
         </section>
 
     </main>

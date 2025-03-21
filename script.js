@@ -50,3 +50,46 @@ function updateCountdown() {
 
 updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
+
+
+// ---------- MONTANT CUSTOM POUR FORMULAIRE DON ----------
+const autreRadio = document.getElementById("autre");
+const montantPerso = document.getElementById("montantPerso");
+
+montantPerso.addEventListener("focus", function() {
+  autreRadio.checked = true;
+});
+
+montantPerso.addEventListener("input", function() {
+  autreRadio.value = montantPerso.value;
+});
+
+
+// ---------- DEFAULT MONTANT DIFFERENTS SI DON UNIQUE OU MENSUEL  ----------
+function updateMontants() {
+  let soutienMensuel = document.getElementById('mensuel').checked;
+  let montantCinquante = document.getElementById('cinquante');
+  let montantCent = document.getElementById('cent');
+  let montantCentcinquante = document.getElementById('centcinquante');
+      
+      // Si soutien mensuel, on ajuste les valeurs
+  if (soutienMensuel) {
+    montantCent.nextElementSibling.textContent = '30 CHF';
+    montantCinquante.nextElementSibling.textContent = '15 CHF';
+    montantCinquante.value = 'quinze';
+    montantCentcinquante.nextElementSibling.textContent = '50 CHF';
+    montantCentcinquante.value = 'cinquante';
+    montantCent.value = 'trente';
+  } else {
+    montantCent.nextElementSibling.textContent = '100 CHF';
+    montantCinquante.nextElementSibling.textContent = '50 CHF';
+    montantCinquante.value = 'cinquante';
+    montantCentcinquante.nextElementSibling.textContent = '150 CHF';
+    montantCentcinquante.value = 'centcinquante';
+    montantCent.value = 'cent';
+  }
+}
+
+document.getElementById('unique').addEventListener('change', updateMontants);
+document.getElementById('mensuel').addEventListener('change', updateMontants);
+updateMontants();
