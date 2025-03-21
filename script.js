@@ -61,7 +61,7 @@ montantPerso.addEventListener("focus", function() {
 });
 
 montantPerso.addEventListener("input", function() {
-  autreRadio.value = montantPerso.value;
+  autreRadio.value = montantPerso.value ;
 });
 
 

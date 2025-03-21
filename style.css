@@ -26,6 +26,7 @@
     font-family: 'ClashDisplay-Medium', sans-serif;
     text-decoration: none;
     font-size: clamp(0.875rem, 0.8332rem + 0.2432vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 14px - max-FS: 18px */
+    transition: 0.2s ease-in-out;
 }
 .btn-primary:hover {
     background-color: transparent;
@@ -40,6 +41,7 @@
     font-family: 'ClashDisplay-Medium', sans-serif;
     text-decoration: none;
     font-size: clamp(1rem, 0.9791rem + 0.1216vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 16px - max-FS: 18px */
+    transition: 0.2s ease-in-out;
 }
 .btn-secondary:hover {
     background-color: var(--bleu-roi);
@@ -201,6 +203,7 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     height: 90vh;
     background: var(--noir);
     z-index: 15;
+    cursor: none;
 }
 .hero-header-content {
     z-index: 30;
@@ -377,7 +380,7 @@ input[type=radio] {
     border: solid var(--noir);
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
-    font-size: clamp(0.625rem, 0.4996rem + 0.7295vw, 1.375rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 10px - max-FS: 22px */
+    font-size: clamp(0.75rem, 0.6873rem + 0.3647vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 12px - max-FS: 18px */
 }
 .zone-soutien .input-zone input:nth-child(1) + label {
     border-width: 2px 1px 2px 2px;
@@ -391,25 +394,40 @@ input[type=radio] {
     color: var(--blanc);
 }
 input[type=number] {
-    padding: 0.8rem 1.6rem;
+    padding: 0.8rem 0.2rem 0.8rem 1.6rem;
     background-color: transparent;
     outline: none;
     font-family: 'ClashDisplay-Regular', sans-serif;
     border: 0;
     height: 100%;
-    width: 100%;
-    font-size: clamp(0.625rem, 0.4996rem + 0.7295vw, 1.375rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 10px - max-FS: 22px */
+    width: 60%;
+    font-size: clamp(0.75rem, 0.6873rem + 0.3647vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 12px - max-FS: 18px */
 }
 
 #autre + label {
     padding: 0;
-    width: 15%;
+    display: flex;
+    align-items: center;
 }
 
 #autre:checked ~ label input[type="number"] {
     color: var(--blanc);
 }
-
+.zone-soutien, .zone-montant {
+    width: 50%;
+}
+.zone-montant .input-zone>label {
+    width: 25%;
+}
+.zone-soutien .input-zone>input + label {
+    width: 45%;
+} 
+.zone-paiement .input-zone>input + label {
+    width: 20%;
+} 
+.zone-paiement {
+    margin-bottom: 5%;
+}
 .zone-montant .input-zone input:nth-child(1) + label {
     border-width: 2px 1px 2px 2px;
 }
@@ -434,11 +452,12 @@ input[type=number] {
 }
 .zone-info .input-zone {
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 #prenom, #nom, #email {
     background-color: var(--blanc);
     font-family: 'ClashDisplay-Regular', sans-serif;
-    font-size: clamp(0.625rem, 0.4996rem + 0.7295vw, 1.375rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 10px - max-FS: 22px */
+    font-size: clamp(0.75rem, 0.6873rem + 0.3647vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 12px - max-FS: 18px */
     padding: 0.8rem 1.6rem;
     outline: none;
     border-width: 0px 0px 2px 0px;
@@ -458,7 +477,7 @@ input[type=number] {
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: clamp(0.625rem, 0.4996rem + 0.7295vw, 1.375rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 10px - max-FS: 22px */
+    font-size: clamp(0.75rem, 0.6873rem + 0.3647vw, 1.125rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 12px - max-FS: 18px */
 }
 input[type="checkbox"] {
     appearance: none;
@@ -479,7 +498,17 @@ input[type="checkbox"]:checked::after {
     color: var(--blanc);
 }
 
+.form-part1 {
+    display: flex;
+    margin-bottom: 5%;
+}
 
+.submit-don {
+    margin-top: 5%;
+    display: block;
+    margin-inline: auto;
+    cursor: pointer;
+}
 
 /*  ---------- FOOTER ---------- */
 footer {
@@ -611,6 +640,30 @@ footer {
         margin-bottom: 4%;
     }
 
+    /*  ---------- DON SECTION ---------- */
+    .form-part1 {
+        flex-direction: column;
+    }
+    .zone-montant {
+        margin-top: 5%;
+        width: 100%;
+    }
+    .zone-soutien, .zone-paiement, .zone-info {
+        width: 100%;
+    }
+    .zone-soutien .input-zone>input + label {
+        width: 50%;
+    } 
+    .zone-paiement .input-zone>input + label {
+        width: 33.3%;
+    } 
+    #nom, #prenom {
+        width: 48%;
+    }
+    #email {
+        width: 100%;
+        margin-top: 3%;
+    }
 }
 
 @media screen and (max-width: 768px) {
