@@ -720,7 +720,7 @@ footer {
         margin-top: 8.3%;
     }
 
-    /*  ---------- VALEURS SECTION ---------- */
+    /*  ---------- DON SECTION ---------- */
     .don {
         margin-top: 15%;
     }
@@ -735,6 +735,12 @@ footer {
     }
     .zone-nl-checkbox {
         margin-bottom: 15%;
+    }
+    .zone-soutien label, .zone-montant label, .zone-paiement label {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     /*  ---------- FOOTER ---------- */
