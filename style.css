@@ -166,7 +166,7 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
     justify-content: center;
     align-items: center;
     background-color: var(--blanc);
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -178,6 +178,10 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
 .opened-burger-menu>a {
     margin-block: 3vw;
 }
+
+.opened-burger-menu>a:nth-child(1), .opened-burger-menu>a:nth-child(2), .opened-burger-menu>a:nth-child(3) {
+    font-size: clamp(1.375rem, 1.2914rem + 0.4863vw, 1.875rem); /* min-WP: 275px - max-WP: 1920px / min-FS: 22px - max-FS: 30px */
+}  
 
 .mobile>.opened-burger-menu>a:nth-child(1) {
     margin-top: 8rem;
@@ -677,9 +681,10 @@ footer {
         flex-direction: column-reverse;
         padding: 0;
         margin-bottom: 0;
+        margin-top: 20%;
     }
     .aide>img {
-        margin: 5% 0 0 0;
+        margin: 15% 0 0 0;
         border-radius: 0;
         width: 100%;
     }
@@ -691,6 +696,8 @@ footer {
     /*  ---------- EVENT SECTION ---------- */
     .event {
         padding-bottom: 0;
+        padding-top: 20%;
+
     }
     .countdown-zone {
         display: none;
@@ -701,15 +708,33 @@ footer {
     .event>img {
         grid-column: 1 / span 12;
         border-radius: 0;
-        margin-top: 8.3%;
+        margin-top: 15%;
     }
 
     /*  ---------- VALEURS SECTION ---------- */
     .valeurs>h2 {
         margin-bottom: 8.3%;
+        margin-top: 15%;
     }
     .valeurs>a {
         margin-top: 8.3%;
+    }
+
+    /*  ---------- VALEURS SECTION ---------- */
+    .don {
+        margin-top: 15%;
+    }
+    .don-content {
+        padding-block: 8.3%;
+    }
+    .don-content>h2 {
+        margin-bottom: 10%;
+    }
+    .zone-soutien, .zone-montant, .zone-paiement, .zone-info, .zone-nl-checkbox {
+        margin-top: 10%;
+    }
+    .zone-nl-checkbox {
+        margin-bottom: 15%;
     }
 
     /*  ---------- FOOTER ---------- */
