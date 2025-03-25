@@ -197,7 +197,7 @@ nav>.main-nav-link>a, .mobile>.opened-burger-menu>a {
 /*  ---------- HERO HEADER SECTION ---------- */
 .hero-header {
     height: 90vh;
-    background-image: url("src/image/hearo_header.jpg");
+    background-image: url("src/image/hero_header.webp");
     background-size: cover;
 }
 
