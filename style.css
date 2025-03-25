@@ -617,7 +617,7 @@ footer {
         display: none;
     }
     .hero-header {
-        background-image: linear-gradient(30deg, rgba(255, 237, 209, 1), rgba(255, 237, 209, 0)), url("src/image/hearo_header.jpg");
+        background-image: linear-gradient(30deg, rgba(255, 237, 209, 1), rgba(255, 237, 209, 0)), url("src/image/hero_header.webp");
         background-size: cover;
     }
     .hero-header-content {
